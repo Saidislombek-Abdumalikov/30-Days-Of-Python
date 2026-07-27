@@ -1,4 +1,3 @@
-
 #Day 1 - 30DaysOfPython Challenge BMI Calculator
 
 weight = input("Enter weight in kg: ")
