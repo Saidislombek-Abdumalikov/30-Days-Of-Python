@@ -27,6 +27,11 @@ print('num_int', int(num_int))      # 10
 
 # str to list
 first_name = 'Saidislom'
-print(first_name)               # 'Saidislom'
+last_name = 'Abdumalikov'
+print(first_name)       
+print(last_name)       
 first_name_to_list = list(first_name)
+last_name_to_list = list(last_name)
+
 print(first_name_to_list)            # ['S', 'a', 'i', 'd', 'i', 's', 'l', 'o', 'm']
+print(last_name_to_list)             # ['A', 'b', 'd', 'u', 'm', 'a', 'l', 'i', 'k', 'o', 'v']
