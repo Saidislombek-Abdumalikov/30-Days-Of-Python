@@ -7,11 +7,13 @@ hotel_price = int(input("Hotel price per night: "))
 food_budget = int(input("Food budget per day: "))
 transport_cost = int(input("Transportation cost: "))
 other_ex = int(input("Other expenses: "))
+budget = int(input("Budget: "))
 
 hotel_cost = hotel_price * num_night
 food_cost = food_budget * num_night
 
 total = num_night * (hotel_price + food_budget) + transport_cost + other_ex
+remaining_money = budget - total
 avg_per_day = total / num_night
 
 print()
@@ -34,7 +36,7 @@ print()
 print(f"Transportation: {transport_cost} uzs")
 print()
 
-print(f"Other expences: {other_ex} uzs")
+print(f"Other expenses: {other_ex} uzs")
 print()
 
 print("----------------------------------------")
@@ -46,6 +48,10 @@ print()
 
 print("Average Per Day: ")
 print(avg_per_day)
+print()
+
+print("Remaing Money: ")
+print(remaining_money)   # no if statement, even it shows negative 
 print()
 
 print("===========================================")
