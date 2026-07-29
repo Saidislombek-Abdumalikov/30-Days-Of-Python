@@ -6,17 +6,21 @@ car_name = input("Car Model: ")
 trip_distance = int(input("Trip distance (km): "))
 avg_speed = int(input("Average driving speed (km/h): "))
 fuel_consumption = int(input("Fuel consumption (litres per 100 km): "))
+fuel_in_tank = int(input("Fuel currently in tank: "))
 fuel_price = float(input("Fuel price (per liter): "))
 budget= float(input("Budget (uzs): "))
+
 #input
 
 fuel_needed = trip_distance * fuel_consumption / 100          #calculates the liter of fuel needed for trip
 total_trip_cost = fuel_needed * fuel_price                    #calcualtes the total cost  
 time_to_reach_h = trip_distance / avg_speed                   #calculates the time in hours, like 2.5
 hours = int(time_to_reach_h)                                  #converts, like 2,5 to 2.0
-minutes = float(time_to_reach_h % 1 * 60)                     #calcualtes the remaining time in minutes
+minutes = time_to_reach_h % 1 * 60                            #calcualtes the remaining time in minutes
 remaining_money = budget - total_trip_cost                    #calculates the money left
 cost_per_km = total_trip_cost / trip_distance                 #calcualtes the money spent on each km
+will_i_reach = fuel_in_tank >= fuel_needed
+fuel_left = fuel_in_tank - fuel_needed
 
 print()
 print("--------- FUEL TRIP REPORT --------")
@@ -31,10 +35,16 @@ print()
 print(f"Total distance in km: {trip_distance}")
 print()
 
-print(f"Expected time to reach A to B: {hours} hours and {minutes} minut")
+print(f"Expected time to reach A to B: {hours} hours and {minutes} minutes")
 print()
 
 print(f"Fuel needed: {fuel_needed}")
+print()
+
+print(f"Will I reach my destination without filling the tank? - : {will_i_reach}")
+print()
+
+print(f"Fuel left after the trip: {fuel_left} litres")
 print()
 
 print(f"Total trip cost: {total_trip_cost} uzs")
