@@ -24,6 +24,7 @@ cost3 = pr3_quantity * pr3_price
 
 total_cost = cost1 + cost2 + cost3
 total_items = pr1_quantity + pr2_quantity + pr3_quantity
+avg_per_item = total_cost / total_items
 
 
 print()
@@ -50,6 +51,9 @@ print("--------- TOTAL BILL ---------")
 print()
 
 print(f"Total number of items: {total_items}")
+print()
+
+print(f"Average price per item is: {avg_per_item} uzs")
 print()
 
 print(f"Total bill is: {total_cost} uzs")
