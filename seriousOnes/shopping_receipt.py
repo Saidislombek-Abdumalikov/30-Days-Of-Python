@@ -23,6 +23,7 @@ cost2 = pr2_quantity * pr2_price
 cost3 = pr3_quantity * pr3_price
 
 total_cost = cost1 + cost2 + cost3
+total_items = pr1_quantity + pr2_quantity + pr3_quantity
 
 
 print()
@@ -48,5 +49,8 @@ print()
 print("--------- TOTAL BILL ---------")
 print()
 
-print(f"Total cost is: {total_cost} uzs")
+print(f"Total number of items: {total_items}")
+print()
+
+print(f"Total bill is: {total_cost} uzs")
 print()
