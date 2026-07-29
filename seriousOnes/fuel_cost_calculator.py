@@ -12,9 +12,11 @@ budget= float(input("Budget (uzs): "))
 
 fuel_needed = trip_distance * fuel_consumption / 100          #calculates the liter of fuel needed for trip
 total_trip_cost = fuel_needed * fuel_price                    #calcualtes the total cost  
-time_to_reach_h = trip_distance / avg_speed                   #calculates the time in hours
-time_to_reach_M = int(time_to_reach_h * 60)                   #calcualtes the time in minutes
+time_to_reach_h = trip_distance / avg_speed                   #calculates the time in hours, like 2.5
+hours = int(time_to_reach_h)                                  #converts, like 2,5 to 2.0
+minutes = float(time_to_reach_h % 1 * 60)                     #calcualtes the remaining time in minutes
 remaining_money = budget - total_trip_cost                    #calculates the money left
+cost_per_km = total_trip_cost / trip_distance                 #calcualtes the money spent on each km
 
 print()
 print("--------- FUEL TRIP REPORT --------")
@@ -29,13 +31,16 @@ print()
 print(f"Total distance in km: {trip_distance}")
 print()
 
-print(f"Expected time to reach A to B: {time_to_reach_h} hours or {time_to_reach_M} minutes")
+print(f"Expected time to reach A to B: {hours} hours and {minutes} minut")
 print()
 
 print(f"Fuel needed: {fuel_needed}")
 print()
 
 print(f"Total trip cost: {total_trip_cost} uzs")
+print()
+
+print(f"Cost per kilometer (uzs/km): {cost_per_km}")
 print()
 
 print(f"Remaining money: {remaining_money} uzs")
