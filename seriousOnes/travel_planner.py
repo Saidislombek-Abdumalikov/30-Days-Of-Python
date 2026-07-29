@@ -9,12 +9,16 @@ transport_cost = int(input("Transportation cost: "))
 other_ex = int(input("Other expenses: "))
 budget = int(input("Budget: "))
 
-hotel_cost = hotel_price * num_night
-food_cost = food_budget * num_night
+hotel_cost = hotel_price * num_night                        #total money spent on booking hotel
+food_cost = food_budget * num_night                         #total money spent on food
 
-total = num_night * (hotel_price + food_budget) + transport_cost + other_ex
-remaining_money = budget - total
-avg_per_day = total / num_night
+total = num_night * (hotel_price + food_budget) + transport_cost + other_ex       #total money spent on the trip
+remaining_money = budget - total                            #remaining money from budget
+avg_per_day = total / num_night                             #average money spent for travelling per day
+hotel_percentage = float(hotel_cost * 100 / total)          #percentage of money spent on booking hotel
+food_percentage = float(food_cost * 100 / total)            #percentage of money spent on food
+transport_percentage = float(transport_cost * 100 / total)  #percentage of monet spent on transportation
+
 
 print()
 
@@ -28,12 +32,15 @@ print(f"Days: {num_night} ")
 print()
 
 print(f"Hotel cost: {hotel_cost} uzs")
+print(f"Hotel takes {hotel_percentage} of your total trip cost.")
 print()
 
 print(f"Food cost: {food_cost} uzs")
+print(f"Food takes {food_percentage} of your total trip cost.")
 print()
 
 print(f"Transportation: {transport_cost} uzs")
+print(f"Transportation takes {transport_percentage} of your total trip cost.")
 print()
 
 print(f"Other expenses: {other_ex} uzs")
