@@ -26,6 +26,11 @@ per_math = math_mark * 100 / total_marks
 per_english = english_mark * 100 / total_marks
 per_science = science_mark * 100 / total_marks
 per_history = history_mark * 100 / total_marks
+missing_math = 100 - math_mark
+missing_english = 100 - english_mark
+missing_science = 100 - science_mark
+missing_history = 100 - history_mark
+
 
 print()
 print("------- STUDENT REPORT CARD --------")
@@ -34,14 +39,7 @@ print()
 print(f"Student Name: {s_name}")
 print()
 
-print("Subjects")
-print(f"Math: {math_mark}")
-print(f"English: {english_mark}")
-print(f"Science: {science_mark}")
-print(f"History: {history_mark}")
-print()
-
-print("---------------------------------")
+print("------------------------------------")
 print()
 
 print(f"Total Marks: {total_marks}")
@@ -53,19 +51,54 @@ print()
 print(f"Percentage Marks Overall: {percentage_mark} %")
 print()
 
-print(f"Math Contribution: {per_math} %")
-
-print(f"English Contribution: {per_english} %")
-
-print(f"Science Contribution: {per_science}")
-
-print(f"History Contribution: {per_history} %")
-print()
-
 print(f"Average Marks: {avg_mark}")
 print()
 
 print(f"Marks Lost: {lost_mark}" )
 print()
+
+
+print("-------- SUBJECT ANALYSIS --------")
+print()
+
+print("Math")
+print(f"Score: {math_mark}")
+
+print(f"Contribution: {per_math} %")
+
+print(f"Missing: {missing_math}")
+print()
+
+
+
+print("English")
+print(f"Score: {english_mark}")
+
+print(f"Contribution: {per_english} %")
+
+print(f"Missing: {missing_english}")
+print()
+
+
+
+print("Science")
+print(f"Score: {science_mark}")
+
+print(f"Contribution: {per_science} %")
+
+print(f"Missing: {missing_science}")
+print()
+
+
+
+print("History")
+print(f"Score: {history_mark}")
+
+print(f"Contribution: {per_history} %")
+
+print(f"Missing: {missing_history}")
+print()
+
+
 
 print("===================================")
