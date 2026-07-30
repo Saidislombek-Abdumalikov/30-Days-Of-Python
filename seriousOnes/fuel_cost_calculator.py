@@ -35,7 +35,7 @@ print()
 print(f"Total distance in km: {trip_distance}")
 print()
 
-print(f"Expected time to reach A to B: {hours} hours and {minutes} minutes")
+print(f"Expected time to reach A to B: {hours} hours and {minutes:.2f} minutes")
 print()
 
 print(f"Fuel needed: {fuel_needed}")
