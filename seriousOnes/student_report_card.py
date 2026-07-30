@@ -87,6 +87,7 @@ print(f"Score: {science_mark}")
 print(f"Contribution: {per_science} %")
 
 print(f"Missing: {missing_science}")
+
 print()
 
 
