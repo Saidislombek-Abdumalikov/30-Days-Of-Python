@@ -14,6 +14,9 @@ avg_m_used_day = total_bill / 30
 percentage_budget_spent = total_bill * 100 / budget
 percentage_budget_remaining = remaining_budget * 100 / budget
 
+cost_per_hour = avg_m_used_day / 24
+e_used_per_hour = avg_e_used_day / 24
+
 print()
 print("---------- ELECTRICITY BILL REPORT ----------")
 print()
@@ -30,13 +33,20 @@ print()
 print(f"Electricity used: {e_used} kWh")
 print()
 
+
 print(f"Average electricity used per day: {avg_e_used_day} kWh")
 print()
 
-print(f"Price per kWh: {price}")
+print(f"Electricity used per hour: {e_used_per_hour} kWh")
+print()
+
+print(f"Price per kWh: {price} uzs")
 print()
 
 print(f"Average money spent per day: {avg_m_used_day} uzs")
+print()
+
+print(f"Money spent per hour: {cost_per_hour} uzs")
 print()
 
 print(f"Total Bill: {total_bill} uzs")
