@@ -22,6 +22,11 @@ avg_mark = total_marks / 4
 percentage_mark = total_marks * 100 / highest_mark
 lost_mark = highest_mark - total_marks
 
+per_math = math_mark * 100 / total_marks
+per_english = english_mark * 100 / total_marks
+per_science = science_mark * 100 / total_marks
+per_history = history_mark * 100 / total_marks
+
 print()
 print("------- STUDENT REPORT CARD --------")
 print()
@@ -45,7 +50,16 @@ print()
 print(f"Highest Possible Marks: {highest_mark}")
 print()
 
-print(f"Percentage Marks: {percentage_mark} %")
+print(f"Percentage Marks Overall: {percentage_mark} %")
+print()
+
+print(f"Math Contribution: {per_math} %")
+
+print(f"English Contribution: {per_english} %")
+
+print(f"Science Contribution: {per_science}")
+
+print(f"History Contribution: {per_history} %")
 print()
 
 print(f"Average Marks: {avg_mark}")
