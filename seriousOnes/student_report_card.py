@@ -61,7 +61,7 @@ print()
 print("-------- SUBJECT ANALYSIS --------")
 print()
 
-print("Math")
+print("--- Math ---")
 print(f"Score: {math_mark}")
 
 print(f"Contribution: {per_math} %")
@@ -71,7 +71,7 @@ print()
 
 
 
-print("English")
+print("--- English ---")
 print(f"Score: {english_mark}")
 
 print(f"Contribution: {per_english} %")
@@ -81,7 +81,7 @@ print()
 
 
 
-print("Science")
+print("--- Science ---")
 print(f"Score: {science_mark}")
 
 print(f"Contribution: {per_science} %")
@@ -91,7 +91,7 @@ print()
 
 
 
-print("History")
+print("--- History ---")
 print(f"Score: {history_mark}")
 
 print(f"Contribution: {per_history} %")
