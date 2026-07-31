@@ -18,12 +18,16 @@ other = int(input("Others (usd): "))
 #financial situation
 lent = int(input("Lent (usd): "))
 debt = int(input("Debt (usd): "))
+monthly_saving_goal = int(input("Monthly saving goal: "))
+monthly_expense_limit = int(input("Monthly expense limit: "))
+
 
 '''HEADINGS'''
 heading_info = "\n------- EMPLOYEE INFORMATION --------\n"
 heading_income = "\n-------- INCOME INFORMATION --------\n"
 heading_expense = "\n-------- EXPENSE INFORMATION -------\n"
 heading_summary = "\n------------ SUMMARY ------------\n"
+heading_financial_situation = "\n-------- FINANCIAL SITUATION -------\n"
 
 '''FORMULA'''
 total_income = base_salary + bonus_salary
@@ -51,6 +55,8 @@ debt_exp_ptg = debt * 100 / total_income
 #inc = income
 base_inc_ptg = base_salary * 100 / total_income
 bonus_inc_ptg = bonus_salary * 100 / total_income
+saving_goal_ptg = total_income * 100 / monthly_saving_goal
+expense_limit_ptg = total_expense * 100 / monthly_expense_limit
 
 
 '''PRINT'''
@@ -59,7 +65,7 @@ print(heading_info)
 
 '''Employee Info'''
 print(f"\nEmployee Name: {employee_name}\n")
-print(f"Employee ID: {employee_id}\n")
+print(f"Employee ID: {employee_id.upper()}\n")
 print(f"Current Position: {position}\n")
 print(f"Working Schedule: {working_schedule}\n")
 print(f"Working Hours: {monthly_working_hours}\n")
@@ -68,7 +74,7 @@ print(f"Working Hours: {monthly_working_hours}\n")
 print(heading_income)
 
 '''Income Info'''
-print(f"Month Name: {month_name}\n")
+print(f"Month Name: {month_name.upper}\n")
 print(f"Base Salary: {base_salary} usd\n")
 print(f"Bonus Salary: {bonus_salary} usd\n")
 
@@ -107,8 +113,21 @@ print(f"Expense per Week: {expense_per_week:.1f} usd\n")
 print(f"Expense per Day {expense_per_day:.1f} usd\n")
 print(f"Expense per Hour {expense_per_hour:.1f} usd\n")
 
-print(f"Saved Money: {saved_money}\n")
-print(f"Percentage of Saved Money: {saved_exp_ptg:.1f} %\n")
+'''HEADING'''
+print(heading_financial_situation)
+
+'''Financial Situation'''
+print(f"Saving Goal: {monthly_saving_goal} usd")
+print(f"Saved Money: {saved_money} usd\n")
+
+print(f"Percentage of Saving Goal: {monthly_saving_goal:.1f} %")
+print(f"Percentage of Saved Money: {saved_exp_ptg:.1f} %\n\n")
+
+print(f"Expense Limit: {monthly_expense_limit} usd")
+print(f"Total Expense: {total_expense:.1f} usd\n")
+
+print(f"Percentage of Expense Limit: {expense_limit_ptg:.1f} %")
+print(f"Percentage of Total Expense: {total_exp_ptg:.1f} %\n")
 
 print(f"I lent {lent_exp_ptg:.1f} % of my Income\n")
 print(f"{debt_exp_ptg:.1f} % of my Income is a Debt\n")
