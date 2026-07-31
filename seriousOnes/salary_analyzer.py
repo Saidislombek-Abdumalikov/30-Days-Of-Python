@@ -37,25 +37,45 @@ income_per_hour = total_income / monthly_working_hours
 expense_per_week = total_expense / 4
 expense_per_day = total_expense / 30
 expense_per_hour = total_expense / monthly_working_hours
+#% of stuff out of income
+#ptg = percentage
+#exp = expense
+total_exp_ptg = total_expense * 100 / total_income
+food_exp_ptg = food * 100 / total_income
+transport_exp_ptg = transport * 100 / total_income
+rent_exp_ptg = rent * 100 / total_income
+other_exp_ptg = other * 100 / total_income
+saved_exp_ptg = saved_money * 100 / total_income
+lent_exp_ptg = lent * 100 / total_income
+debt_exp_ptg = debt * 100 / total_income
+#inc = income
+base_inc_ptg = base_salary * 100 / total_income
+bonus_inc_ptg = bonus_salary * 100 / total_income
+
 
 '''PRINT'''
+'''Heading'''
 print(heading_info)
 
+'''Employee Info'''
 print(f"\nEmployee Name: {employee_name}\n")
 print(f"Employee ID: {employee_id}\n")
 print(f"Current Position: {position}\n")
 print(f"Working Schedule: {working_schedule}\n")
 print(f"Working Hours: {monthly_working_hours}\n")
 
+'''Heading'''
 print(heading_income)
 
+'''Income Info'''
 print(f"Month Name: {month_name}\n")
 print(f"Base Salary: {base_salary} usd\n")
 print(f"Bonus Salary: {bonus_salary} usd\n")
 
-
+'''Heading'''
 print(heading_expense)
 
+'''Expense Info'''
 print(f"Rent: {rent} usd\n")
 print(f"Food: {food} usd\n")
 print(f"Transport: {transport} usd\n")
@@ -63,19 +83,32 @@ print(f"Others: {other} usd\n")
 print(f"Lent: {lent} usd\n")
 print(f"Debt: {debt} usd\n")
 
-
+'''Heading'''
 print(heading_summary)
 
+'''Income Summary'''
 print(f"Total Income: {total_income} usd\n")
 print(f"Income Per:\nWeek   \tDay   \tHour")
 print(f"Income per Week: {income_per_week:.1f} usd\n")
 print(f"Income per Day {income_per_day:.1f} usd\n")
 print(f"Income per Hour {income_per_hour:.1f} usd\n\n")
+print(f"Base Salary is {base_inc_ptg:.1f} % of my Income\n")
+print(f"Bonus is {bonus_inc_ptg:.1f} % of my Income\n")
 
-print(f"Total Expense: {total_expense} usd\n")
+'''Expense Summary'''
+print(f"Total Expense: {total_expense:.1f} usd\n")
+print(f"Expense is {total_exp_ptg:.1f} % of my Income\n")
+print(f"Rent is {rent_exp_ptg:.1f} % of my Income\n")
+print(f"Food is {food_exp_ptg:.1f} % of my Income\n")
+print(f"Transport is {transport_exp_ptg:.1f} % of my Income\n")
+print(f"Other expenses are {other_exp_ptg:.1f} % of my Income\n")
 print(f"Expense Per:\nWeek   \tDay   \tHour")
 print(f"Expense per Week: {expense_per_week:.1f} usd\n")
 print(f"Expense per Day {expense_per_day:.1f} usd\n")
 print(f"Expense per Hour {expense_per_hour:.1f} usd\n")
 
-print(f"Saved Money: {saved_money}")
+print(f"Saved Money: {saved_money}\n")
+print(f"Percentage of Saved Money: {saved_exp_ptg:.1f} %\n")
+
+print(f"I lent {lent_exp_ptg:.1f} % of my Income\n")
+print(f"{debt_exp_ptg:.1f} % of my Income is a Debt\n")
