@@ -33,11 +33,11 @@ heading_financial_situation = "\n-------- FINANCIAL SITUATION -------\n"
 total_income = base_salary + bonus_salary
 total_expense = rent + food + transport + other
 saved_money = total_income - total_expense
-#income-per
+#Income information
 income_per_week = total_income / 4 
 income_per_day = total_income / 30
 income_per_hour = total_income / monthly_working_hours
-#expensee-per
+#Expense information
 expense_per_week = total_expense / 4
 expense_per_day = total_expense / 30
 expense_per_hour = total_expense / monthly_working_hours
@@ -64,9 +64,9 @@ expense_limit_ptg = total_expense * 100 / monthly_expense_limit
 print(heading_info)
 
 '''Employee Info'''
-print(f"\nEmployee Name: {employee_name}\n")
+print(f"\nEmployee Name: {employee_name.title()}\n")
 print(f"Employee ID: {employee_id.upper()}\n")
-print(f"Current Position: {position}\n")
+print(f"Current Position: {position.title()}\n")
 print(f"Working Schedule: {working_schedule}\n")
 print(f"Working Hours: {monthly_working_hours}\n")
 
