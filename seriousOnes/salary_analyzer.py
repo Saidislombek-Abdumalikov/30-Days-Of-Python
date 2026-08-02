@@ -61,7 +61,7 @@ expense_limit_ptg = total_expense * 100 / monthly_expense_limit
 
 '''PRINT'''
 '''Heading'''
-print(heading_info)
+print("EMPLOYEE INFORMATION".center(50))
 
 '''Employee Info'''
 print(f"\nEmployee Name: {employee_name.title()}\n")
@@ -71,15 +71,15 @@ print(f"Working Schedule: {working_schedule}\n")
 print(f"Working Hours: {monthly_working_hours}\n")
 
 '''Heading'''
-print(heading_income)
+print("INCOME INFORMATION".center(50))
 
 '''Income Info'''
-print(f"Month Name: {month_name.upper}\n")
+print(f"Month Name: {month_name.upper()}\n")
 print(f"Base Salary: {base_salary} usd\n")
 print(f"Bonus Salary: {bonus_salary} usd\n")
 
-'''Heading'''
-print(heading_expense)
+'''Heading'''.center(50)
+print("EXPENSE INFORMATION".center(50))
 
 '''Expense Info'''
 print(f"Rent: {rent} usd\n")
@@ -90,7 +90,7 @@ print(f"Lent: {lent} usd\n")
 print(f"Debt: {debt} usd\n")
 
 '''Heading'''
-print(heading_summary)
+print("SUMMARY".center(50))
 
 '''Income Summary'''
 print(f"Total Income: {total_income} usd\n")
@@ -114,7 +114,7 @@ print(f"Expense per Day {expense_per_day:.1f} usd\n")
 print(f"Expense per Hour {expense_per_hour:.1f} usd\n")
 
 '''HEADING'''
-print(heading_financial_situation)
+print("FINANCIAL SITUATION".center(50))
 
 '''Financial Situation'''
 print(f"Saving Goal: {monthly_saving_goal} usd")
