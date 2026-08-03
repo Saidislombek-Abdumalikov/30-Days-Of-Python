@@ -1,11 +1,11 @@
 #Freelancer Invoice Generator v1.2
 
-freelancer_name = input("Freelancer name: ")
-client_name = input("Client name: ")
-client_tel = input("+998 ")
-invoice_id = input("Invoice ID: ")
-invoice_month = input("Invoice month (eg.June): ")
-project_name = input("Project name:")
+freelancer_name = input("Freelancer name: ").strip().title()
+client_name = input("Client name: ").strip().title()
+client_tel = input("+998 ").strip()
+invoice_id = input("Invoice ID: ").strip().upper()
+invoice_month = input("Invoice month (eg.June): ").strip().lower()
+project_name = input("Project name:").strip().upper()
 hours_worked = int(input("Hours worked: "))
 hourly_rate = int(input("Hourly rate (USD): "))
 tax_ptg = int(input("Tax percentage: "))
@@ -28,18 +28,18 @@ heading_analysis = "PAYMENT ANALYSIS"
 '''PRINT'''
 print("\n",heading_freelancer.center(50))
 
-print(f"\nFreelancer Name: {freelancer_name.title()}\n")
+print(f"\nFreelancer Name: {freelancer_name}\n")
 
 print("\n",heading_client.center(50))
 
-print(f"\nClient Name: {client_name.title()}")
+print(f"\nClient Name: {client_name}")
 print(f"Client Phone Number: +998 {client_tel}\n")
 
 print("\n",heading_invoice.center(50))
 
-print(f"\nInvoice ID: {invoice_id.upper()}")
-print(f"Month: {invoice_month.upper()}")
-print(f"Project name: {project_name.title()}")
+print(f"\nInvoice ID: {invoice_id}")
+print(f"Month: {invoice_month}")
+print(f"Project name: {project_name}")
 print(f"Hours worked: {hours_worked}")
 print(f"Hourly rate: {hourly_rate} USD")
 print(f"Tax percentage: {tax_ptg} %")
